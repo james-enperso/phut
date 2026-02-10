@@ -1,0 +1,24 @@
+{
+  "name": "phut-builder",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler dev",
+    "dev:frontend": "cd frontend && vite dev",
+    "build:frontend": "cd frontend && vite build",
+    "build": "npm run build:frontend",
+    "deploy": "npm run build && wrangler deploy",
+    "db:migrate": "wrangler d1 execute phut-db --file=./migrations/0001_create_tables.sql && wrangler d1 execute phut-db --file=./migrations/0002_seed_chains.sql",
+    "db:migrate:local": "wrangler d1 execute phut-db --local --file=./migrations/0001_create_tables.sql && wrangler d1 execute phut-db --local --file=./migrations/0002_seed_chains.sql",
+    "db:import": "tsx scripts/import-properties.ts"
+  },
+  "dependencies": {
+    "hono": "^4.6.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20241205.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0",
+    "wrangler": "^3.90.0"
+  }
+}

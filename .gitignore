@@ -1,0 +1,10 @@
+node_modules/
+frontend/node_modules/
+frontend/dist/
+.wrangler/
+.dev.vars
+dist/
+*.log
+.DS_Store
+migrations/seed_properties.sql
+migrations/chunk_*

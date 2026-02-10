@@ -1,0 +1,20 @@
+{
+  "name": "phut-builder",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-02-10",
+  "assets": {
+    "directory": "./frontend/dist"
+  },
+  "vars": {
+    "ENTRA_TENANT_ID": "b52fc953-9412-41ef-8169-b8672c9c002c",
+    "ENTRA_TENANT_DOMAIN": "enperso.com"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "phut-db",
+      "database_id": "" // Fill after: wrangler d1 create phut-db
+    }
+  ]
+  // Set secrets via: wrangler secret put ENTRA_CLIENT_ID / ENTRA_CLIENT_SECRET / SESSION_SECRET
+}
