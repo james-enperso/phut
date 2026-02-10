@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "wrangler dev",
     "dev:frontend": "cd frontend && vite dev",
-    "build:frontend": "cd frontend && vite build",
+   "build:frontend": "cd frontend && npm run build",
+
     "build": "npm run build:frontend",
     "deploy": "npm run build && wrangler deploy",
     "db:migrate": "wrangler d1 execute phut-db --file=./migrations/0001_create_tables.sql && wrangler d1 execute phut-db --file=./migrations/0002_seed_chains.sql",
