@@ -13,7 +13,7 @@
     {
       "binding": "DB",
       "database_name": "phut-db",
-      "database_id": "" // Fill after: wrangler d1 create phut-db
+      "database_id": "bea5a0b8-dbf3-436f-a77f-1d10762981da"
     }
   ]
   // Set secrets via: wrangler secret put ENTRA_CLIENT_ID / ENTRA_CLIENT_SECRET / SESSION_SECRET
